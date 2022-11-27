@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>titulaso</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{box-sizing: border-box;}
+		body{
+			margin: 0;
+			font-family: sans-serif;
+			background: #204862;
+		}
+		h1{
+			color: #fff;
+			text-align: center;
+		}
+
+		.form-register{
+			width: 55%;
+			max width: 500px;
+			margin: auto;
+			background: white;
+			border-radius:7px;
+		}
+
+		.form__titulo{
+			background: deepskyblue;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-weight: 100;
+			font-size: 30px;
+			border-top-left-radius: 7px;
+			border-top-right-radius: 7px;
+			borrder-bottom:5px solid crimson;
+		}
+
+		.contenedor-inputs{
+			padding: 10px 30px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		input{margin-bottom: 15px;
+			padding: 15px;
+			font-size: 16px;
+		    border-radius: 3px;
+		  border: 1px solid darkgray}
+
+			.input-50{
+				width: 48%;
+			}
+
+			.input-100{width: 100%}
+			.btn-enviar{
+				background: crimson;
+				color: #fff;
+				margin: auto;
+				padding: 10px 40px;
+			}
+
+			.fomr__link{
+				width: 100%;
+				margin: 7px;
+				text-align: center;
+				font-size: 14px;
+			}
+	</style>
+	<script type="text/javascript" src="validacion.js"></script>
+</head>
+<body>
+<h1>Formulario de registro</h1>
+
+<form action="registrar.php" method="post" class="form-register" onsubmit="return validar();">
+
+
+	<h2 class="form__titulo"> crea una cuenta</h2>
+	<div class="contenedor-inputs">
+
+		<input type="text" id="nombre"name="nombre" placeholder="nombre"class="input50">
+
+		<input type="text" id="apellidos"name="apellido" placeholder="apellido" class="input50">
+
+		<input type="email" id="correo"name="correo" placeholder="correo" class=" input-100">
+		<input type="text" id="usuario"name="usuario" placeholder="usuario" class="input50">
+
+		<input type="password" id="clave" name="clave" placeholder="contraseña" class="input50">
+		<input type="text" id="telefono"  name="telefono" placeholder="telefono" class="input-100">
+		<input type="submit" value="registrar" class="btn-enviar">
+		<br>
+		<p class="form__link">¿ya tiene un cuenta? <a href="">ingrese aqui</a></p>
+	</div>
+</form>
+
+</body>
+</html>
